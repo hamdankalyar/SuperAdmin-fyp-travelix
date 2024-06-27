@@ -1,0 +1,133 @@
+/* Sidebar.css */
+.sidebar {
+    width: 200px;
+    /* good practice to use the position fixed on the sidebar that it must stick to the left in all the conditions  */
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    background-color: #1c1c1c;
+    color: white;
+    transition: width 0.4s;
+    overflow: hidden;
+}
+
+/* compound selector */
+.sidebar.collapsed {
+    width: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sidebar-header {
+    padding: 20px;
+    cursor: pointer;
+}
+
+.sidebar-menu {
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu-item a {
+    /* display: flex; */
+    /* flex-direction: row; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    display: flex !important;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+    position: relative;
+    padding: 12px 20px;
+    display: block;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+
+}
+
+.menu-item a::after {
+    content: '';
+    position: absolute;
+    right: 5px;
+    top: 0;
+    bottom: 0;
+    width: 5px;
+    background: white;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.menu-item.collapsed a::after {
+
+    right: 0;
+
+}
+
+.menu-item a:hover {
+    background-color: #444;
+    transform: scale(1.05);
+
+}
+
+.menu-item a:hover::after {
+    transform: scaleX(1);
+
+}
+
+.menu-item a span {
+    margin-left: 10px;
+}
+
+.sidebar-footer {
+    position: absolute;
+    bottom: 17px;
+    width: 100%;
+}
+
+.sidebar-footer a {
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+}
+
+.footer-collapsed {
+
+    padding: 10px 27px !important;
+}
+
+.sidebar-footer span {
+    margin-left: 10px;
+}
+
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+.user-profile.collapsed {
+    padding-left: 10px;
+    padding-right: 10px;
+
+}
+
+.profile-picture {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+
+}
+
+.user-name {
+    margin-left: 10px;
+    color: #FFF;
+
+}

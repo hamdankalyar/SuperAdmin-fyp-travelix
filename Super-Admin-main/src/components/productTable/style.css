@@ -1,0 +1,102 @@
+/* VehicleTable.css */
+.table-div {
+    overflow: hidden;
+    border-radius: 10px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+
+.vehicle-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.vehicle-table thead {
+    background-color: #f2f2f2;
+    text-align: left;
+}
+
+.vehicle-table th,
+.vehicle-table td {
+    padding: 15px;
+}
+
+.vehicle-table th {
+    font-weight: bold;
+    text-align: center;
+}
+
+.vehicle-table tr {
+    background-color: #fff;
+    text-align: center;
+}
+
+.vehicle-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.vehicle-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.vehicle-image img {
+    width: 65px;
+    height: 50px;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.vehicle-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#flex-div {
+    align-self: baseline;
+    text-align: left;
+}
+
+.vehicle-name {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.vehicle-description {
+    font-size: 14px;
+}
+
+.vehicle-name span {
+    margin: 0 3px;
+}
+
+.edit-link,
+.delete-link {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.edit-link:hover,
+.delete-link:hover {
+    text-decoration: underline;
+}
+
+.product-edit-del-btn {
+    border: none;
+    color: #007bff;
+    background-color: transparent;
+    width: fit-content;
+    display: inline;
+}
+
+.product-edit-del-btn:hover {
+    background-color: transparent;
+}
+
+.table-div {
+    overflow: hidden;
+    border-radius: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
