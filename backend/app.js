@@ -20,6 +20,7 @@ const serviceAccount = require("./travelix-37d94-firebase-adminsdk-yf3yn-f9de911
 const app = express();
 const fileUpload = require("express-fileupload");
 
+dotenv.config();
 connectDb();
 
 app.use(express.json());
